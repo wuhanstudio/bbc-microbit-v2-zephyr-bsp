@@ -1,5 +1,7 @@
 # Zephyr Device Tree Examples
 
+![](demo.gif)
+
 ## Quick Start
 
 Step 1: Install Zephyr
