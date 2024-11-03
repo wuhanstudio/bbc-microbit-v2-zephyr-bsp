@@ -22,7 +22,7 @@ const float soft_iron[3][3] = {
 };
 
 // Change this
-const double declination = -0.38;
+const double declination = 0.38;
 
 static int32_t read_sensor(const struct device *sensor,
                            enum sensor_channel channel) {
@@ -99,7 +99,7 @@ int main(void) {
 
 	// Declination
     double heading =
-        -(atan2(mag_data[0], mag_data[1]) * 180) / M_PI + declination;
+        -(atan2(mag_data[0], mag_data[1]) * 180) / M_PI - declination;
     if (heading < 0)
       heading = heading + 360;
 
